@@ -1,0 +1,82 @@
+% Requirements
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{Alegreya}
+
+% Fonts
+\usefonttheme{serif}
+\setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{framesubtitle}{size=\large}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\footnotesize}
+\setbeamerfont{section title}{size=\LARGE}
+
+% Colors
+\definecolor{uc3m}{HTML}{001489}
+\setbeamercolor*{title page header}{fg=white}
+\setbeamercolor*{author}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{item}{fg=uc3m}
+
+% Background
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=brown] (0,2) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=orange] (0,0) rectangle (2.95,1.9);
+  \fill[color=blue!50!cyan!80] (3.05,0) rectangle (\the\paperwidth,1.9);
+  \ifnum\thepage>1\relax%
+    \fill[white,opacity=1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+    \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{Arguelles}[1][]
+{
+  \vskip6cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip.75cm%
+      \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+        \usebeamerfont{author}\insertauthor%
+      \end{beamercolorbox}%
+      \vskip.2cm%
+        \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+          \usebeamerfont{author}\insertdate%
+        \end{beamercolorbox}
+  \vfill
+}
+
+% Frame title
+\defbeamertemplate*{frametitle}{Arguelles}[1][]
+{
+  \vskip1cm%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle}
+    \begin{tikzpicture}
+    \useasboundingbox[fill=white] (0,0) rectangle (\the\paperwidth,1.2);
+    \fill[orange] (0,0) rectangle (2.95,1.2);
+    \fill[blue!50!cyan!80] (3.05,0) rectangle (\the\paperwidth,1.2);
+      \ifx\insertframesubtitle\@empty%
+        {\node[anchor=west,white,font=\large] at (3.2,0.61) {\insertframetitle};}
+        \else%
+        {
+          \node[anchor=west,white,font=\large] at (3.2,0.81) {\insertframetitle};%
+          \node[anchor=west,white,font=\small] at (3.2,0.31) {\insertframesubtitle};%
+        }
+        \fi
+    \end{tikzpicture}
+    \end{beamercolorbox}
+}
+
+% Lists
+\setbeamertemplate{items}[none]
+\setbeamertemplate{sections/subsections in toc}[circle]
+
+% Blocks
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+% Navigation
+\setbeamertemplate{navigation symbols}{}
