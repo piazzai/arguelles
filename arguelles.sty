@@ -1,70 +1,65 @@
 % Requirements
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{cancel}
+\RequirePackage{xfrac}
+\RequirePackage{hyperref}
 \RequirePackage{Alegreya}
+\RequirePackage{AlegreyaSans}
+\RequirePackage{euler}
+\RequirePackage{fontawesome}
 
 % Fonts
 \usefonttheme{serif}
 \setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{subtitle}{size=\Large}
+\setbeamerfont{date}{series=\itshape}
+\setbeamerfont{author}{series=\bfseries}
+\setbeamerfont{institute}{size=\small}
 \setbeamerfont{frametitle}{size=\Large}
-\setbeamerfont{framesubtitle}{size=\large}
-\setbeamerfont{date}{size=\small}
-\setbeamerfont{institute}{size=\footnotesize}
-\setbeamerfont{section title}{size=\LARGE}
+% \setbeamerfont{section title}{size=\LARGE}
 
 % Colors
 \definecolor{uc3m}{HTML}{001489}
-\setbeamercolor*{title page header}{fg=white}
-\setbeamercolor*{author}{fg=white}
-\setbeamercolor*{date}{fg=white}
-\setbeamercolor*{item}{fg=uc3m}
+\definecolor{paper}{HTML}{f5f5f5}
+\definecolor{ink}{HTML}{27221f}
+\setbeamercolor{normal text}{fg=ink}
+\setbeamercolor{alerted text}{fg=uc3m}
+\setbeamercolor{structure}{bg=paper,fg=ink}
 
 % Background
 \setbeamertemplate{background}{
   \begin{tikzpicture}
-  \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \fill[color=brown] (0,2) rectangle (\the\paperwidth,\the\paperheight);
-  \fill[color=orange] (0,0) rectangle (2.95,1.9);
-  \fill[color=blue!50!cyan!80] (3.05,0) rectangle (\the\paperwidth,1.9);
-  \ifnum\thepage>1\relax%
-    \fill[white,opacity=1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-    \fi
+  \fill[structure.bg] (0,0) rectangle (\paperwidth,\paperheight);
   \end{tikzpicture}
 }
 
 % Title page
-\defbeamertemplate*{title page}{Arguelles}[1][]
-{
-  \vskip6cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
-      \usebeamerfont{title}\inserttitle\par%
-    \end{beamercolorbox}%
-    \vskip.75cm%
-      \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
-        \usebeamerfont{author}\insertauthor%
-      \end{beamercolorbox}%
-      \vskip.2cm%
-        \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
-          \usebeamerfont{author}\insertdate%
-        \end{beamercolorbox}
-  \vfill
+\defbeamertemplate*{title page}{arguelles}[1][]{
+  \null\vfill
+  \begin{beamercolorbox}{title page header}
+    {\usebeamerfont{title}\inserttitle\par\smallskip}
+    {\usebeamerfont{subtitle}\insertsubtitle\par\bigskip}
+    {\usebeamerfont{date}\insertdate\par\bigskip}
+    {\usebeamerfont{author}\insertauthor\par\smallskip}
+    {\usebeamerfont{institute}\insertinstitute\par}
+  \end{beamercolorbox}
 }
 
 % Frame title
-\defbeamertemplate*{frametitle}{Arguelles}[1][]
-{
-  \vskip1cm%
-    \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle}
+\defbeamertemplate*{frametitle}{arguelles}[1][]{
+    \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
     \begin{tikzpicture}
-    \useasboundingbox[fill=white] (0,0) rectangle (\the\paperwidth,1.2);
-    \fill[orange] (0,0) rectangle (2.95,1.2);
-    \fill[blue!50!cyan!80] (3.05,0) rectangle (\the\paperwidth,1.2);
-      \ifx\insertframesubtitle\@empty%
-        {\node[anchor=west,white,font=\large] at (3.2,0.61) {\insertframetitle};}
+    \useasboundingbox (0,0) rectangle (\paperwidth,.145\paperheight);
+    \fill[structure.bg] (0,0) rectangle (\paperwidth,.145\paperheight);
+      \ifx\insertframesubtitle\@empty
+        {\node[anchor=south west] at (.035\paperwidth,.025\paperheight) {\insertframetitle};}
         \else%
         {
-          \node[anchor=west,white,font=\large] at (3.2,0.81) {\insertframetitle};%
-          \node[anchor=west,white,font=\small] at (3.2,0.31) {\insertframesubtitle};%
+          \node[anchor=south west] at (.035\paperwidth,.065\paperheight) {\insertframetitle};
+          \node[anchor=south west,font=\large] at (.035\paperwidth,0) {\insertframesubtitle};
         }
         \fi
     \end{tikzpicture}
@@ -73,10 +68,14 @@
 
 % Lists
 \setbeamertemplate{items}[none]
-\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{sections/subsections in toc}[none]
 
 % Blocks
-\setbeamertemplate{blocks}[rounded][shadow=true]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
 
 % Navigation
 \setbeamertemplate{navigation symbols}{}
+
+% Macros
+\newcommand\email[1]{\itshape\href{mailto:#1}{#1}}
+\newcommand\link[1]{\itshape\href{https://#1}{https://#1}}
