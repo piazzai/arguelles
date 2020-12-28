@@ -1,2 +1,3 @@
 # arguelles
-Locally-sourced beamer theme
+
+This is a custom beamer theme. At the moment, it is under construction.
