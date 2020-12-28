@@ -1,31 +1,81 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{arguelles}
 
 \title{Arguelles Theme}
-\date[\today]{An attempt at creating a beamer theme}
-\author[Myself]{Michele Piazzai}
-
-\usepackage{arguelles}
+\subtitle{Simple, Typographic Beamer Theme}
+\date{\today}
+\author{Michele Piazzai}
+\institute{
+	Universidad Carlos III de Madrid \par
+	Depto.\ Economía de la Empresa \par\medskip
+	\email{michele.piazzai@uc3m.es}\par
+	\link{piazzai.github.io}
+	}
 
 \begin{document}
 
 \frame{\titlepage}
 
+\frame{\tableofcontents}
+
+\section{First section}
+\subsection{The first subsection}
+
 \begin{frame}
-\frametitle{Title}
-\framesubtitle{Subtitle}
-
-\begin{theorem}
-Test theorem.
-\end{theorem}
-
+\frametitle{A frame with title and subtitle}
+\framesubtitle{The subtitle goes here}
+Ordered list:
 \begin{enumerate}
 \item First item
 \item Second item
 \item Third item
 \end{enumerate}
+\bigskip
+Unordered list:
+\begin{enumerate}[$\bullet$]
+\item First-level item
+\begin{enumerate}[$\circ$]
+\item Second-level item
+\begin{enumerate}[\textbullet]
+\item Third-level item
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{frame}
 
+\subsection{The second subsection}
+
+\begin{frame}
+\frametitle{A frame with title only}
+\begin{theorem}
+\[e^{i\pi}+1=0\]
+\begin{proof}
+\begin{equation*}
+e^{iz}=\cos{z}+i\sin{z}
+\end{equation*}
+\center{therefore}
+\begin{align*}
+e^{i\pi}+1 & \null= \cos\pi+i\sin\pi+1 \\
+& \null=-1+\cancel{i\times0}+1 \\
+& \null=0
+\end{align*}
+\end{proof}
+\end{theorem}
+\end{frame}
+
+\section{Second section}
+\subsection{A lonely subsection}
+
+\begin{frame}
+\frametitle{A frame with title only}
+\begin{block}{Block}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{block}
+\begin{alert}{Warning!}
+To the left is alerted text
+\end{alert}
 \end{frame}
 
 \end{document}
