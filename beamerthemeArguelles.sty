@@ -1,0 +1,26 @@
+\mode<presentation>
+
+% Requirements
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\RequirePackage{Alegreya}
+\RequirePackage{AlegreyaSans}
+\RequirePackage{euler}
+
+% Settings
+\useinnertheme{Arguelles}
+\useoutertheme{Arguelles}
+\usecolortheme{Arguelles}
+\usefonttheme{Arguelles}
+
+\definecolor{cultured}{HTML}{f5f5f5}
+\definecolor{sumi}{HTML}{27221f}
+\definecolor{corsa}{HTML}{d40000}
+\definecolor{cobalt}{HTML}{0047ab}
+
+\AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
+\newcommand\Section[1]{\section{\lowercase{#1}}}
+
+\mode<all>

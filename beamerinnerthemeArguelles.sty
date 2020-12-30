@@ -1,0 +1,46 @@
+\mode<presentation>
+
+% Settings
+\setbeamertemplate{items}[none]
+\setbeamertemplate{blocks}[rounded]
+
+% Background
+\BeforeBeginEnvironment{frame}{
+  \setbeamertemplate{background}{
+    \begin{tikzpicture}
+      \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+      \ifnum\thepage>1\relax
+        \fill[cultured] (0,.2em) rectangle (\the\paperwidth,\the\paperheight-.2em);
+      \fi
+    \end{tikzpicture}
+  }
+}
+
+% Title page
+\defbeamertemplate*{title page}{Arguelles}{
+  \vfill\begin{beamercolorbox}{inverted text}
+    {\usebeamerfont{title}\inserttitle}\par
+    {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
+    {\usebeamerfont{date}\insertdate}\par\bigskip
+    {\usebeamerfont{author}\insertauthor}\par\smallskip
+    {\usebeamerfont{institute}\insertinstitute}
+  \end{beamercolorbox}
+  }
+
+% Standout frame
+\providebool{Arguelles@standout}
+\define@key{beamerframe}{standout}[true]{
+  \booltrue{Arguelles@standout}
+  \begingroup
+  \setbeamertemplate{background}{}
+  \color{structure.bg}
+  \LARGE
+  \centering
+}
+\pretocmd{\beamer@reseteecodes}{
+  \ifbool{Arguelles@standout}{
+    \endgroup\boolfalse{Arguelles@standout}
+  }{}
+}{}{}
+
+\mode<all>
