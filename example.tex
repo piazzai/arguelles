@@ -8,7 +8,7 @@
 \subtitle{Simple, typographic beamer theme}
 \date{}
 \author{Place Holder}
-\institute{University of Git \\ Department of \TeX}
+\institute{University of \TeX\par\email{username@domain.com}}
 
 \begin{document}
 
@@ -19,6 +19,8 @@
   \begin{frame}
     \frametitle{A frame with title and subtitle}
     \framesubtitle{The subtitle goes here}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\par
+    \vfill
     Ordered list:
     \begin{enumerate}
       \item First item
@@ -57,12 +59,13 @@
   \end{frame}
 
   \begin{frame}[plain]
+    \frametitle{A \textit{plain} frame has no headline}
     \begin{block}{Block}
-      A \textit{plain} frame has no headline
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     \end{block}
     \vfill
     \begin{alert}{Alert!}
-      A \textit{plain} frame still appears in the navigation bar unless:
+      A plain frame still counts for the navigation bar unless:
       \begin{itemize}
         \item It is the first frame, or
         \item It is placed after \textsf{\textbackslash appendix}
@@ -71,17 +74,17 @@
   \end{frame}
 
   \begin{frame}[standout]
-  A \textit{\bfseries standout} frame can be used to highlight something important, either as is\ldots
-  \end{frame}
-
-  \begin{frame}[plain,standout]
-  \ldots or in combination with \textit{\bfseries plain}.
+    \Large
+    A \textbf{standout} frame can be used to focus attention
   \end{frame}
 
   \appendix
   \begin{frame}[plain,standout]
-  \scalebox{5}{\faGithub}\par\bigskip
-  \url{https://github.com/piazzai/arguelles}
+    In combination with \textit{\bfseries plain},\par
+    it makes a nice closing slide!
+    \vfill
+    \scalebox{4}{\faGithub}\par\bigskip
+    \url{https://github.com/piazzai/arguelles}
   \end{frame}
 
 \end{document}
