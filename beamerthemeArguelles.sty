@@ -2,10 +2,10 @@
 
 % Requirements
 \RequirePackage{tikz}
-\RequirePackage{xcolor}
+\RequirePackage{microtype}
 \RequirePackage{fontawesome}
-\RequirePackage{Alegreya}
-\RequirePackage{AlegreyaSans}
+\RequirePackage[osf]{Alegreya}
+\RequirePackage[osf]{AlegreyaSans}
 \RequirePackage{euler}
 
 % Settings
@@ -20,7 +20,9 @@
 \definecolor{cobalt}{HTML}{0047ab}
 
 \AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
-\newcommand\email[1]{\href{mailto:#1}{\faEnvelope\hspace{.5em}\ttfamily #1}}
+\newcommand\email[1]{\href{mailto:#1}{\faEnvelope\hspace{.5em}\sffamily #1}}
 \newcommand\Section[1]{\section{\lowercase{#1}}}
+\renewcommand{\appendixname}{}
+\newcommand\ThankYou{\appendix}
 
 \mode<all>
