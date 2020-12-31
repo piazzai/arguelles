@@ -1,7 +1,9 @@
 \mode<presentation>
 
 % Settings
-\setbeamertemplate{items}[none]
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+\setbeamertemplate{itemize subsubitem}{\textbullet}
 \setbeamertemplate{blocks}[rounded]
 
 % Background
@@ -36,8 +38,7 @@
   \beamer@frametopskip=0pt plus 1fill\relax%
   \beamer@framebottomskip=0pt plus 1.25fill\relax%
   \color{structure.bg}
-  \large
-  \centering
+  \large\centering
 }
 \pretocmd{\beamer@reseteecodes}{
   \ifbool{Arguelles@standout}{
