@@ -14,7 +14,7 @@
 
   \frame[plain]{\titlepage}
 
-  \Section{Example Section}
+  \Section{Demo}
 
   \begin{frame}
     \frametitle{A frame with title and subtitle}
@@ -29,15 +29,15 @@
     \end{enumerate}
     \vfill
     Unordered list:
-    \begin{enumerate}[$\bullet$]
+    \begin{itemize}
       \item First level
-      \begin{enumerate}[$\circ$]
+      \begin{itemize}
         \item Second level
-        \begin{enumerate}[\textbullet]
+        \begin{itemize}
           \item Third level
-        \end{enumerate}
-      \end{enumerate}
-    \end{enumerate}
+        \end{itemize}
+      \end{itemize}
+    \end{itemize}
   \end{frame}
 
   \begin{frame}
@@ -59,17 +59,25 @@
   \end{frame}
 
   \begin{frame}[plain]
-    \frametitle{A \textit{plain} frame has no headline}
-    \begin{block}{Block}
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    \end{block}
+    \frametitle{A plain frame has no headline}
+    \begin{table}
+      \small
+      \begin{tabular}{rl}
+        \ttfamily\textbackslash Alegreya & \Alegreya Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaExtraBold & \AlegreyaExtraBold Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaBlack & \AlegreyaBlack Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaMedium & \AlegreyaMedium Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSans & \AlegreyaSans Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSansThin & \AlegreyaSansThin Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSansLight & \AlegreyaSansLight Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSansMedium & \AlegreyaSansMedium Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSansExtraBold & \AlegreyaSansExtraBold Lorem ipsum dolor sit amet \\
+        \ttfamily\textbackslash AlegreyaSansBlack & \AlegreyaSansBlack Lorem ipsum dolor sit amet
+      \end{tabular}
+    \end{table}
     \vfill
     \begin{alert}{Alert!}
-      A plain frame still counts for the navigation bar unless:
-      \begin{itemize}
-        \item It is the first frame, or
-        \item It is placed after \textsf{\textbackslash appendix}
-      \end{itemize}
+      A plain frame will appear in the navigation bar unless it is the first frame or it is placed after \texttt{\textbackslash ThankYou}.
     \end{alert}
   \end{frame}
 
@@ -78,10 +86,10 @@
     A \textbf{\itshape\scshape standout} frame can be used to focus attention
   \end{frame}
 
-  \appendix
+  \ThankYou
   \begin{frame}[plain,standout]
     In combination with \textit{plain},\par
-    it makes a nice closing slide!
+    it makes a nice thank-you slide!
     \vfill\scalebox{4}{\faGithub}\par\bigskip
     \url{https://github.com/piazzai/arguelles}
   \end{frame}
