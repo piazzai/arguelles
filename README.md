@@ -48,7 +48,7 @@ Suppose you want to change the color scheme. By default, the theme's background 
 
 ```tex
 \definecolor{cultured}{HTML}{f5f5f5}
-\definecolor{sumi}{HTM resets sans-serif type as default for all text, unless otherwise specified. Changing `\urlstyle{sf}` to `\urlstyle{same}` makes UL}{27221f}
+\definecolor{sumi}{HTML}{27221f}
 \definecolor{corsa}{HTML}{d40000}
 \definecolor{cobalt}{HTML}{0047ab}
 ```
