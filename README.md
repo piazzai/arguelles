@@ -9,6 +9,9 @@ The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](ht
 -   [Demo](#demo)
 -   [Installation](#installation)
 -   [Customization](#customization)
+    -   [Colors](#colors)
+    -   [Font weights](#font-weights)
+    -   [Figures](#figures)
 
 * * *
 
@@ -31,29 +34,55 @@ If you plan to use the theme for multiple presentations, or simply do not want t
 
 ## Customization
 
-It is possible to change parts of the theme by altering the `*.sty` files. There are five files:
+It is possible to change parts of the theme by altering the `*.sty` files. There are five such files:
 
--   `beamercolortheme*.sty` sets the color scheme;
+-   `beamercolortheme*.sty` sets the colors;
 -   `beamerfonttheme*.sty` sets font styles and weights;
 -   `beamerinnertheme*.sty` sets the appearance of frames;
 -   `beameroutertheme*.sty` sets the appearance of headline and frame titles;
--   `beamertheme*.sty` loads packages and defines custom colors and commands.
+-   `beamertheme*.sty` loads required packages and defines custom colors and commands.
+
+### Colors
 
 Suppose you want to change the color scheme. By default, the theme's background consists of an off-white rectangle, with hex F5F5F5 ([cultured](https://encycolorpedia.com/f5f5f5)), over an ink-colored canvas with hex 27221F ([sumi](https://encycolorpedia.com/27221f)). The color of alerted text is set to a bright red called [corsa](https://encycolorpedia.com/d40000), with hex D40000. These color definitions are included in `beamertheme*.sty`.
 
 ```tex
 \definecolor{cultured}{HTML}{f5f5f5}
-\definecolor{sumi}{HTML}{27221f}
+\definecolor{sumi}{HTM resets sans-serif type as default for all text, unless otherwise specified. Changing `\urlstyle{sf}` to `\urlstyle{same}` makes UL}{27221f}
 \definecolor{corsa}{HTML}{d40000}
 \definecolor{cobalt}{HTML}{0047ab}
 ```
 
-There is also a fourth color, a shade of blue called [cobalt](https://encycolorpedia.com/0047ab), which is currently unused in the design. If, for example, you wanted this to be the color of alerted text, then you would open `beamercolortheme*.sty` and change `\setbeamercolor*{alerted text}{fg=corsa}` to `\setbeamercolor*{alerted text}{fg=cobalt}`. Similar tweaks can be made for the color of normal text, the background, or any other element of the layout. Naturally, you can also define your own colors: [here](https://coolors.co/generate) is a handy online tool to quickly generate good-looking color schemes.
+There is also a fourth color, a shade of blue called [cobalt](https://encycolorpedia.com/0047ab), which is currently unused in the design. If, for example, you wanted this to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for the line:
 
-Just like colors, it is possible to change font styles and weights. Alegreya is a comprehensive font family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual `\bfseries`, `\itshape`, and `\scshape`, Alegreya also comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These styles are called by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin` (see the [Alegreya package README](https://www.ctan.org/pkg/alegreya)), and can be combined with `\scshape` or `\itshape` so as to produce a variety of effects.
+```tex
+\setbeamercolor*{alerted text}{fg=corsa}
+```
 
-The file `beamerfonttheme*.sty` sets the type for various elements of the layout. For example, the appearance of frame titles is governed by `\setbeamerfont{frame title}{size=\Large}`. If you wanted to give frame titles a little bit more weight, you could set `\setbeamerfont{frame title}{series=\AlegreyaMedium,size=\Large}`. If you wanted to make them slightly larger, you could set `\setbeamerfont{frame title}{size=\LARGE}`.
+Change `{fg=corsa}` to `{fg=cobalt}`, and you are set. Similar changes can be made to tweak the color of normal text, background, or any other element of layout. Naturally, you can also define your own colors.
 
-By default, the theme uses serif Alegreya and reserves sans-serif type for the presentation title, formatted in Alegreya Sans Black, as well as URLs. It is possible to alter this behavior by modifying `beamerfonttheme*.sty`. For example, changing `\setbeamerfont{title}{series=\AlegreyaSansBlack,size=\LARGE}` to `\setbeamerfont{title}{series=\AlegreyaBlack,size=\LARGE}` sets the presentation title to serif while keeping the black weight. Deleting `\usefonttheme{serif}` resets sans-serif type as the default for all text, unless otherwise specified. Changing `\urlstyle{sf}` to `\urlstyle{same}` makes URLs appear just like normal text, and deleting the line altogether resets them to true type.
+### Font weights
 
-Figures are automatically set to old style, which is more varied and dynamic. If you wish to use lining figures instead, you can set these as default by opening `beamertheme*.sty` and removing the `osf` options from the packages `Alegreya` and `AlegreyaSans`. Both old-style and lining figures are also available in a monospaced version, which is helpful for tables and other environments where numbers are displayed in column. It is possible to use these versions locally with the commands `\AlegreyaTOsF` (for old style) and `\AlegreyaTLF` (for lining).
+Just like colors, it is possible to change font styles and weights. Alegreya is a comprehensive family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual bold called by `\bfseries`, Alegreya also comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These weights are called by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin` (see the [Alegreya package README](https://www.ctan.org/pkg/alegreya) for full details), and can be combined with `\scshape` or `\itshape` to produce a variety of effects.
+
+The file `beamerfonttheme*.sty` sets the type for various elements of the layout. For example, the appearance of frame titles is governed by the following line of code:
+
+```tex
+\setbeamerfont{frame title}{size=\Large}
+```
+
+If you wanted to give frame titles a little bit more weight, you could set `{series=\AlegreyaMedium,size=\Large}`. If you wanted to make them slightly larger, you could set `{size=\LARGE}`.
+
+By default, the theme uses serif Alegreya and reserves sans-serif type for the presentation title, formatted in Alegreya Sans Black, and URLs. It is possible to alter this behavior by modifying `beamerfonttheme*.sty`. For example, the appearance of the presentation title is given by:
+
+```tex
+\setbeamerfont{title}{series=\AlegreyaSansBlack,size=\LARGE}
+```
+
+Setting this to `{series=\AlegreyaBlack,size=\LARGE}` makes the title serif while keeping the same weight. Deleting `\usefonttheme{serif}` near the beginning of the file resets sans-serif type as default for all text, unless otherwise specified. Changing `\urlstyle{sf}` to `\urlstyle{same}` makes URLs appear just like normal text, and deleting the line altogether resets them to true type.
+
+### Figures
+
+Figures are automatically set to old style, which is more varied and dynamic than the lining ("modern") style. If you wish to use lining figures instead, you can set these as default by opening `beamertheme*.sty` and removing the `osf` options from the packages `Alegreya` and `AlegreyaSans`.
+
+Both old-style and lining figures are also available in a monospaced version, which is helpful for tables and other environments where numbers are displayed in column. It is possible to use these versions locally with the commands `\AlegreyaTOsF` (for old style) and `\AlegreyaTLF` (for lining). They can also be set as global default by loading packages with the `tf` option.
