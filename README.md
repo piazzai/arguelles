@@ -85,4 +85,9 @@ Setting this to `{series=\AlegreyaBlack,size=\LARGE}` makes the title serif whil
 
 Figures are automatically set to old style, which is more varied and dynamic than the lining ("modern") style. If you wish to use lining figures instead, you can set these as default by opening `beamertheme*.sty` and removing the `osf` options from the packages `Alegreya` and `AlegreyaSans`.
 
-Both old-style and lining figures are also available in a monospaced version, which is helpful for tables and other environments where numbers are displayed in column. It is possible to use these versions locally with the commands `\AlegreyaTOsF` (for old style) and `\AlegreyaTLF` (for lining). They can also be set as global default by loading packages with the `tf` option.
+Both old-style and lining figures are also available in a monospaced version, which is helpful for tables and other environments where numbers are displayed in column. It is possible to use these versions locally with the commands `\AlegreyaTOsF` (for old style) and `\AlegreyaTLF` (for lining). They can also be set as global defaults by loading packages with the `tf` option, as in:
+
+```tex
+\RequirePackage[osf,tf]{Alegreya}
+\RequirePackage[osf,tf]{AlegreyaSans}
+```
