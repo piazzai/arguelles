@@ -50,16 +50,17 @@ Suppose you want to change the color scheme. By default, the theme's background 
 \definecolor{cultured}{HTML}{f5f5f5}
 \definecolor{sumi}{HTML}{27221f}
 \definecolor{corsa}{HTML}{d40000}
+\definecolor{fern}{HTML}{4f7942}
 \definecolor{cobalt}{HTML}{0047ab}
 ```
 
-There is also a fourth color, a shade of blue called [cobalt](https://encycolorpedia.com/0047ab), which is currently unused in the design. If, for example, you wanted this to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for the line:
+There are also two more colors, called [fern](https://encycolorpedia.com/4f7942) and [cobalt](https://encycolorpedia.com/0047ab), which are currently unused in the design. If, for example, you wanted one of these to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for the line:
 
 ```tex
 \setbeamercolor*{alerted text}{fg=corsa}
 ```
 
-Change `{fg=corsa}` to `{fg=cobalt}`, and you are set. Similar changes can be made to tweak the color of normal text, background, or any other element of layout. Naturally, you can also define your own colors.
+Change the color name after `fg=` and you are set. Similar changes can be made to tweak the color of normal text, background, or any other element of layout. Naturally, you can also define your own colors.
 
 ### Font weights
 
