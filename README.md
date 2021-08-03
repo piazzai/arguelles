@@ -54,7 +54,7 @@ Suppose you want to change the color scheme. By default, the theme's background 
 \definecolor{cobalt}{HTML}{0047ab}
 ```
 
-There are also two more colors, called [fern](https://encycolorpedia.com/4f7942) and [cobalt](https://encycolorpedia.com/0047ab), which are currently unused in the design. If, for example, you wanted one of these to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for the line:
+There are also two more colors, called [fern](https://encycolorpedia.com/4f7942) and [cobalt](https://encycolorpedia.com/0047ab), which are currently unused in the design. If, for example, you wanted one of these to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for:
 
 ```tex
 \setbeamercolor*{alerted text}{fg=corsa}
