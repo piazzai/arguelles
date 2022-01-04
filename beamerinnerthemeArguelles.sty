@@ -8,42 +8,42 @@
 
 % Background
 \BeforeBeginEnvironment{frame}{
-  \setbeamertemplate{background}{
-    \begin{tikzpicture}
-      \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
-      \ifnum\thepage>1\relax
-        \fill[cultured] (0,.2em) rectangle (\the\paperwidth,\the\paperheight-.2em);
-      \fi
-    \end{tikzpicture}
-  }
+ \setbeamertemplate{background}{
+  \begin{tikzpicture}
+   \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+   \ifnum\thepage>1\relax
+    \fill[cultured] (0,.2em) rectangle (\the\paperwidth,\the\paperheight-.2em);
+   \fi
+  \end{tikzpicture}
+ }
 }
 
 % Title page
 \defbeamertemplate*{title page}{Arguelles}{
-  \vfill\begin{beamercolorbox}{inverted text}
-    {\usebeamerfont{title}\inserttitle}\par
-    {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
-    {\usebeamerfont{date}\insertdate}\par\bigskip
-    {\usebeamerfont{author}\insertauthor}\par\smallskip
-    {\usebeamerfont{institute}\insertinstitute}
-  \end{beamercolorbox}
+ \vfill\begin{beamercolorbox}{inverted text}
+  {\usebeamerfont{title}\inserttitle}\par
+  {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
+  {\usebeamerfont{date}\insertdate}\par\bigskip
+  {\usebeamerfont{author}\insertauthor}\par\smallskip
+  {\usebeamerfont{institute}\insertinstitute}
+ \end{beamercolorbox}
 }
 
 % Standout frame
 \providebool{Arguelles@standout}
 \define@key{beamerframe}{standout}[true]{
-  \booltrue{Arguelles@standout}
-  \begingroup
-  \setbeamertemplate{background}{}
-  \beamer@frametopskip=0pt plus 1fill\relax%
-  \beamer@framebottomskip=0pt plus 1.25fill\relax%
-  \color{structure.bg}
-  \large\centering
+ \booltrue{Arguelles@standout}
+ \begingroup
+ \setbeamertemplate{background}{}
+ \beamer@frametopskip=0pt plus 1fill\relax%
+ \beamer@framebottomskip=0pt plus 1.25fill\relax%
+ \color{structure.bg}
+ \large\centering
 }
 \pretocmd{\beamer@reseteecodes}{
-  \ifbool{Arguelles@standout}{
-    \endgroup\boolfalse{Arguelles@standout}
-  }{}
+ \ifbool{Arguelles@standout}{
+  \endgroup\boolfalse{Arguelles@standout}
+ }{}
 }{}{}
 
 \mode<all>

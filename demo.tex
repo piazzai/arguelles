@@ -12,86 +12,86 @@
 
 \begin{document}
 
-  \frame[plain]{\titlepage}
+\frame[plain]{\titlepage}
 
-  \Section{Demo}
+\Section{Demo}
 
-  \begin{frame}
-    \frametitle{A frame with title and subtitle}
-    \framesubtitle{The subtitle goes here}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\par
-    \vfill
-    Ordered list:
-    \begin{enumerate}
-      \item First item
-      \item Second item
-      \item Third item
-    \end{enumerate}
-    \vfill
-    Unordered list:
-    \begin{itemize}
-      \item First level
-      \begin{itemize}
-        \item Second level
+\begin{frame}
+ \frametitle{A frame with title and subtitle}
+ \framesubtitle{The subtitle goes here}
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\par
+ \vfill
+ Ordered list:
+ \begin{enumerate}
+  \item First item
+  \item Second item
+  \item Third item
+ \end{enumerate}
+ \vfill
+ Unordered list:
+ \begin{itemize}
+  \item First level
         \begin{itemize}
-          \item Third level
+         \item Second level
+               \begin{itemize}
+                \item Third level
+               \end{itemize}
         \end{itemize}
-      \end{itemize}
-    \end{itemize}
-  \end{frame}
+ \end{itemize}
+\end{frame}
 
-  \begin{frame}
-    \frametitle{A frame with title only}
-    \begin{theorem}
-      \[e^{i\pi}+1=0\]
-      \begin{proof}
-        \begin{equation*}
-          e^{iz}=\cos{z}+i\sin{z}
-        \end{equation*}
-        \center{therefore}
-        \begin{align*}
-          e^{i\pi}+1 & \null=\cos\pi+i\sin\pi+1 \\
-          & \null=-1+i\times0+1 \\
-          & \null=0
-        \end{align*}
-      \end{proof}
-    \end{theorem}
-  \end{frame}
+\begin{frame}
+ \frametitle{A frame with title only}
+ \begin{theorem}
+  \[e^{i\pi}+1=0\]
+  \begin{proof}
+   \begin{equation*}
+    e^{iz}=\cos{z}+i\sin{z}
+   \end{equation*}
+   \center{therefore}
+   \begin{align*}
+    e^{i\pi}+1 & \null=\cos\pi+i\sin\pi+1 \\
+               & \null=-1+i\times0+1      \\
+               & \null=0
+   \end{align*}
+  \end{proof}
+ \end{theorem}
+\end{frame}
 
-  \begin{frame}[plain]
-    \frametitle{A plain frame has no headline}
-    \begin{table}
-      \small
-      \begin{tabular}{rl}
-        \ttfamily\textbackslash Alegreya & \Alegreya Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaExtraBold & \AlegreyaExtraBold Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaBlack & \AlegreyaBlack Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaMedium & \AlegreyaMedium Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSans & \AlegreyaSans Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSansThin & \AlegreyaSansThin Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSansLight & \AlegreyaSansLight Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSansMedium & \AlegreyaSansMedium Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSansExtraBold & \AlegreyaSansExtraBold Lorem ipsum dolor sit amet \\
-        \ttfamily\textbackslash AlegreyaSansBlack & \AlegreyaSansBlack Lorem ipsum dolor sit amet
-      \end{tabular}
-    \end{table}
-    \vfill
-    \begin{alert}{Alert!}
-      A plain frame will appear in the navigation bar unless it is the first frame or it is placed after \texttt{\textbackslash ThankYou}.
-    \end{alert}
-  \end{frame}
+\begin{frame}[plain]
+ \frametitle{A plain frame has no headline}
+ \begin{table}
+  \small
+  \begin{tabular}{rl}
+   \ttfamily\textbackslash Alegreya              & \Alegreya Lorem ipsum dolor sit amet              \\
+   \ttfamily\textbackslash AlegreyaExtraBold     & \AlegreyaExtraBold Lorem ipsum dolor sit amet     \\
+   \ttfamily\textbackslash AlegreyaBlack         & \AlegreyaBlack Lorem ipsum dolor sit amet         \\
+   \ttfamily\textbackslash AlegreyaMedium        & \AlegreyaMedium Lorem ipsum dolor sit amet        \\
+   \ttfamily\textbackslash AlegreyaSans          & \AlegreyaSans Lorem ipsum dolor sit amet          \\
+   \ttfamily\textbackslash AlegreyaSansThin      & \AlegreyaSansThin Lorem ipsum dolor sit amet      \\
+   \ttfamily\textbackslash AlegreyaSansLight     & \AlegreyaSansLight Lorem ipsum dolor sit amet     \\
+   \ttfamily\textbackslash AlegreyaSansMedium    & \AlegreyaSansMedium Lorem ipsum dolor sit amet    \\
+   \ttfamily\textbackslash AlegreyaSansExtraBold & \AlegreyaSansExtraBold Lorem ipsum dolor sit amet \\
+   \ttfamily\textbackslash AlegreyaSansBlack     & \AlegreyaSansBlack Lorem ipsum dolor sit amet
+  \end{tabular}
+ \end{table}
+ \vfill
+ \begin{alert}{Alert!}
+  A plain frame will appear in the navigation bar unless it is the first frame or it is placed after \texttt{\textbackslash ThankYou}.
+ \end{alert}
+\end{frame}
 
-  \begin{frame}[standout]
-    \Large
-    A \textbf{\itshape\scshape standout} frame can be used to focus attention
-  \end{frame}
+\begin{frame}[standout]
+ \Large
+ A \textbf{\itshape\scshape standout} frame can be used to focus attention
+\end{frame}
 
-  \ThankYou
-  \begin{frame}[plain,standout]
-    In combination with \textit{plain},\par
-    it makes a nice thank-you slide!
-    \vfill\scalebox{4}{\faGithub}\par\bigskip
-    \url{https://github.com/piazzai/arguelles}
-  \end{frame}
+\ThankYou
+\begin{frame}[plain,standout]
+ In combination with \textit{plain},\par
+ it makes a nice thank-you slide!
+ \vfill\scalebox{4}{\faGithub}\par\bigskip
+ \url{https://github.com/piazzai/arguelles}
+\end{frame}
 
 \end{document}
