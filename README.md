@@ -1,10 +1,10 @@
-# Argüelles
+# Argüelles v1.2.0
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
-The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [makecell](https://ctan.org/pkg/makecell), [Alegreya/AlegreyaSans](https://ctan.org/pkg/alegreya), [cancel](https://ctan.org/pkg/cancel), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in most LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
+The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [makecell](https://ctan.org/pkg/makecell), [Alegreya](https://ctan.org/pkg/alegreya), [cancel](https://ctan.org/pkg/cancel), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in most LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
 
-Argüelles (v1.2.0) is authored by [Michele Piazzai](https://piazzai.github.io) and released under the [MIT License](https://mit-license.org/).
+Argüelles is written by [Michele Piazzai](https://piazzai.github.io) and released under the [MIT License](https://mit-license.org/).
 
 ## Demo
 
@@ -79,4 +79,4 @@ Both old-style and lining figures are also available in a monospaced version, wh
 
 ## Bugs
 
-If you have any problem using this package, please [create an issue](https://github.com/piazzai/arguelles/issues) on GitHub.
+If you encounter any problem while using this package, please [create an issue](https://github.com/piazzai/arguelles/issues) on GitHub.
