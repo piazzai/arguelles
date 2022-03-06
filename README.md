@@ -5,7 +5,7 @@
 - merge, publish, distribute, sublicense, and/or sell. See LICENSE for details.
 -->
 
-# Argüelles
+# arguelles
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
