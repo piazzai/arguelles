@@ -1,10 +1,15 @@
-# arguelles
+<!--
+- arguelles v1.2.0
+- Copyright (c) 2020 Michele Piazzai. Contact: michele.piazzai@uc3m.es
+- This work is released under the MIT License and is free to use, copy, modify,
+- merge, publish, distribute, sublicense, and/or sell. See LICENSE for details.
+-->
+
+# Argüelles
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
 The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [makecell](https://ctan.org/pkg/makecell), [Alegreya](https://ctan.org/pkg/alegreya), [cancel](https://ctan.org/pkg/cancel), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in most LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
-
-Argüelles (v1.2.0) is written by [Michele Piazzai](https://piazzai.github.io) and released under the [MIT License](https://mit-license.org/).
 
 ## Demo
 
