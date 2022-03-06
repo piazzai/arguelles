@@ -7,7 +7,7 @@
 
 # arguelles
 
-Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
+Arguelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
 The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [makecell](https://ctan.org/pkg/makecell), [Alegreya](https://ctan.org/pkg/alegreya), [cancel](https://ctan.org/pkg/cancel), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in most LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
 
@@ -19,7 +19,7 @@ The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
 ## Installation
 
-Argüelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and available as part of TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
+Arguelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and available as part of TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
 
 ## Customization
 
