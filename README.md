@@ -84,4 +84,4 @@ Both old-style and lining figures are also available in a monospaced version, wh
 
 ## Bugs
 
-If you encounter any problem while using this package, please [create an issue](https://github.com/piazzai/arguelles/issues) on GitHub.
+If you find any problem using this package, please [create an issue](https://github.com/piazzai/arguelles/issues).
