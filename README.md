@@ -1,5 +1,5 @@
 <!--
-- arguelles v1.2.1
+- Argüelles v1.2.2
 - Copyright (c) 2020 Michele Piazzai. Contact: michele.piazzai@uc3m.es
 - This work is released under the MIT License and is free to use, copy, modify,
 - merge, publish, distribute, sublicense, and/or sell. See LICENSE for details.
@@ -7,7 +7,7 @@
 
 # arguelles
 
-Arguelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
+Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
 The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [makecell](https://ctan.org/pkg/makecell), [Alegreya](https://ctan.org/pkg/alegreya), [cancel](https://ctan.org/pkg/cancel), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in common LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
 
@@ -19,7 +19,7 @@ The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
 ## Installation
 
-Arguelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
+Argüelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
 
 ## Customization
 
@@ -82,6 +82,12 @@ Both old-style and lining figures are also available in a monospaced version, wh
 \RequirePackage[osf,tf]{AlegreyaSans}
 ```
 
-## Bugs
+## Known issues
 
-If you find any problem using this package, please [create an issue](https://github.com/piazzai/arguelles/issues).
+Argüelles is built with the intention to reserve as much space as possible for the content of your slides. When using subsections, the progress bar in the headline places the dots representing slides in different sections on multiple lines: this behavior is standard for beamer, but it is undesirable because it takes space away from content. The theme does not handle this situation well. You can force the dots to appear on the same line by loading beamer with the `compress` option:
+
+```tex
+\documentclass[compress]{beamer}
+```
+
+If you find any other problem using this package, please [open an issue](https://github.com/piazzai/arguelles/issues).
