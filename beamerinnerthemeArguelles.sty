@@ -53,15 +53,18 @@
  }
 }
 
-% Title page
-\defbeamertemplate*{title page}{Arguelles}{
- \vfill\begin{beamercolorbox}{inverted text}
-  {\usebeamerfont{title}\inserttitle}\par
-  {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
-  {\usebeamerfont{date}\insertdate}\par\bigskip
-  {\usebeamerfont{author}\insertauthor}\par\smallskip
-  {\usebeamerfont{institute}\insertinstitute}
- \end{beamercolorbox}
+% fullscreen image
+\newcommand{\fillpicture}[1]{
+    \centering
+    \ifbeamer@plainframe
+    \tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center) {
+        \includegraphics[width=\paperwidth,height=.98\paperheight]{#1}
+        };
+    \else
+    \tikz[remember picture,overlay] \node[inner sep=0pt] at ($(current page.north)-(0,.526\paperheight)$) {
+        \includegraphics[width=\paperwidth,height=.929\paperheight]{#1}
+        };
+    \fi
 }
 
 % Standout frame
