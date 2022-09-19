@@ -37,14 +37,21 @@
 \usecolortheme{Arguelles}
 \usefonttheme{Arguelles}
 
-% TikZ
-\usetikzlibrary{calc}
+\newif\if@optSans
+\@optSansfalse
+\DeclareOption{sans}{\@optSanstrue}
+\newif\if@optMetropolis
+\@optMetropolisfalse
+\DeclareOption{metropolis}{\@optMetropolistrue}
+\ProcessOptions
 
-\definecolor{cultured}{HTML}{f5f5f5}
-\definecolor{sumi}{HTML}{27221f}
-\definecolor{corsa}{HTML}{d40000}
-\definecolor{fern}{HTML}{4f7942}
-\definecolor{cobalt}{HTML}{0047ab}
+\if@optSans
+\usefonttheme[onlymath]{serif}
+\newcommand\mediumfont{\AlegreyaSansMedium}
+\else
+\usefonttheme{serif}
+\newcommand\mediumfont{\AlegreyaMedium}
+\fi
 
 \AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
 
