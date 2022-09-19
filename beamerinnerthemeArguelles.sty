@@ -8,10 +8,28 @@
 
 \mode<presentation>
 
-% Settings
-\setbeamertemplate{itemize item}{$\bullet$}
-\setbeamertemplate{itemize subitem}{$\circ$}
-\setbeamertemplate{itemize subsubitem}{\textbullet}
+% additional title page fields
+\def\insertevent{}
+\newcommand{\event}[1]{
+  \def\insertevent{#1}
+}
+\def\insertemail{}
+\newcommand{\email}[1]{
+  \def\insertemail{\href{mailto:#1}{\raisebox{-.1em}{\faIcon{envelope}}\hspace{.3em}#1}}
+}
+
+% title page
+\defbeamertemplate*{title page}{Arguelles}{
+ \vfill\begin{beamercolorbox}{inverted text}
+  {\usebeamerfont{title}\inserttitle}\par
+  {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
+  {\usebeamerfont{event}\insertevent}\par
+  {\usebeamerfont{date}\insertdate}\par\bigskip
+  {\usebeamerfont{author}\insertauthor}\par\smallskip
+  {\usebeamerfont{institute}\insertinstitute}\par
+  {\usebeamerfont{email}\insertemail}
+ \end{beamercolorbox}
+}
 \setbeamertemplate{blocks}[rounded]
 
 % Background
