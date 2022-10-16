@@ -32,11 +32,17 @@
 }
 
 % lists
-\setitemize{nosep}
-\setitemize[1]{label={•},itemsep=.4em}
-\setitemize[2]{label={-},topsep=.2em,before=\small}
-\setitemize[3]{label={},topsep=.2em,before=\footnotesize}
-\setdescription{style=standard,align=parleft,labelwidth=!,font=\normalfont\itshape}
+\setlist{nosep,leftmargin=*}
+\setlist[1]{labelindent=\parindent,itemsep=.5em}
+\setlist[2]{before=\small,topsep=.25em}
+\setlist[3]{before=\footnotesize,topsep=.25em}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\circ$}
+\setlist[itemize,3]{label=$\cdot$}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=\theenumi\arabic*.}
+\setlist[enumerate,3]{label=\theenumii\arabic*.}
+\setlist[description]{font=\normalfont\itshape,style=multiline}
 
 % blocks
 \setbeamertemplate{blocks}[rounded]
