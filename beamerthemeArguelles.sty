@@ -31,9 +31,9 @@
 \newif\if@optSans
 \@optSansfalse
 \DeclareOption{sans}{\@optSanstrue}
-\newif\if@optMetropolis
-\@optMetropolisfalse
-\DeclareOption{metropolis}{\@optMetropolistrue}
+\newif\if@optMp
+\@optMpfalse
+\DeclareOption{mp}{\@optMptrue}
 \ProcessOptions
 
 \if@optSans
@@ -42,6 +42,24 @@
 \else
 \usefonttheme{serif}
 \newcommand\mediumfont{\AlegreyaMedium}
+\fi
+
+\if@optMp
+\RequirePackage[normalem]{ulem}
+\RequirePackage{booktabs}
+\RequirePackage{dcolumn}
+\RequirePackage{makecell}
+\RequirePackage{colortbl}
+\RequirePackage{cancel}
+\RequirePackage{pgfplots}
+\RequirePackage{csvsimple}
+
+% tikz options
+\usetikzlibrary{calc}
+
+% pgfplots options
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{statistics,fillbetween}
 \fi
 
 \AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
