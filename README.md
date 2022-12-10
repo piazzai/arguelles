@@ -21,11 +21,11 @@ The `mp` option loads additional dependencies that could be useful for designing
 
 The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
-### Default
+### Serif
 
 ![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-serif.gif)
 
-### With `sans`
+### Sans-serif
 
 ![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-sans.gif)
 
