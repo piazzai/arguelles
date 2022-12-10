@@ -13,7 +13,7 @@ The theme requires the packages [Alegreya/AlegreyaSans](https://ctan.org/pkg/ale
 
 ### Options
 
-By default, the theme uses serif fonts for body text. Loading it with the `sans` options makes sans-serif fonts default, keeping serif only for math type. See the two animations below for comparison.
+By default, the theme uses serif fonts for body text. Loading it with the `sans` options makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points. See the two animations below for comparison.
 
 The `mp` option loads additional dependencies that could be useful for designing scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots) (with `compat=1.18`), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the `calc` library for TikZ and the `statistics` and `fillbetween` libraries for PGFPlots.
 
