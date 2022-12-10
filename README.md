@@ -9,13 +9,25 @@
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
-The theme requires the packages [tikz](https://ctan.org/pkg/pgf), [microtype](https://ctan.org/pkg/microtype), [Alegreya](https://ctan.org/pkg/alegreya), [euler](https://ctan.org/pkg/euler), and [fontawesome5](https://ctan.org/pkg/fontawesome5) to be installed on your computer. These are included in common LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
+The theme requires the packages [Alegreya/AlegreyaSans](https://ctan.org/pkg/alegreya), [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), and [tikz/pgf](https://ctan.org/pkg/pgf) to be installed on your computer. These are included in common LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
+
+### Options
+
+By default, the theme uses serif fonts for body text. Loading it with the `sans` options makes sans-serif fonts default, keeping serif only for math type. See the two animations below for comparison.
+
+The `mp` option loads additional dependencies that could be useful for designing scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots) (with `compat=1.18`), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the `calc` library for TikZ and the `statistics` and `fillbetween` libraries for PGFPlots.
 
 ## Demo
 
 The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
-![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles.gif)
+### Default
+
+![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-serif.gif)
+
+### With `sans`
+
+![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-sans.gif)
 
 ## Installation
 
@@ -33,43 +45,35 @@ It is possible to change parts of the theme by altering the style files. There a
 
 ### Colors
 
-Suppose you want to change the color scheme. By default, the background consists of an off-white ([cultured](https://encycolorpedia.com/f5f5f5)) rectangle over an ink-colored ([sumi](https://encycolorpedia.com/27221f)) canvas. The color of alerted text is set to a bright red called [corsa](https://encycolorpedia.com/d40000). These color definitions are included in `beamertheme*.sty`.
+The theme ships with the `opencolor` package, which provides color definitions for the [Open Color](https://yeun.github.io/open-color/) library. By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
+
+These settings are provided in `beamercolortheme*.sty` and can be customized using any default or opencolor name. For example:
 
 ```tex
-\definecolor{cultured}{HTML}{f5f5f5}
-\definecolor{sumi}{HTML}{27221f}
-\definecolor{corsa}{HTML}{d40000}
-\definecolor{fern}{HTML}{4f7942}
-\definecolor{cobalt}{HTML}{0047ab}
+\setbeamercolor*{structure}{bg=oc-blue-0,fg=black!80}
 ```
 
-There are also two more colors, [fern](https://encycolorpedia.com/4f7942) and [cobalt](https://encycolorpedia.com/0047ab), which are currently unused in the design. If you wanted one of these to be the color of alerted text, then you would open `beamercolortheme*.sty` and look for:
-
-```tex
-\setbeamercolor*{alerted text}{fg=corsa}
-```
-
-Change `corsa` to some other color and you are set. Similar changes can be made to tweak the color of normal text, the background, or any other element of the layout. Of course, you can also define your own colors.
+See the opencolor [README](https://mirrors.dotsrc.org/ctan/macros/latex/contrib/opencolor/README.md) for additional information.
 
 ### Font weights
 
-It is possible to change font styles and weights. Alegreya is a comprehensive family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual bold set by `\bfseries`, Alegreya comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These weights are set by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin` (see the [Alegreya README](https://mirrors.dotsrc.org/ctan/fonts/alegreya/README) for more details), and can be combined with `\scshape` or `\itshape` to produce a variety of effects.
+It is possible to change font styles and weights. Alegreya is a comprehensive family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual bold provided by `\bfseries`, Alegreya comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These weights are set by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin`, as explained in the Alegreya [README](https://mirrors.dotsrc.org/ctan/fonts/alegreya/README), and can be combined with `\scshape` or `\itshape` to produce a variety of effects.
 
-The file `beamerfonttheme*.sty` sets the type for various elements of the layout. For example, the appearance of frame titles is determined by the following command:
+The file `beamerfonttheme*.sty` sets the type for various elements of the layout. For example, the appearance of frame titles is determined by the command:
 
 ```tex
 \setbeamerfont{frame title}{size=\Large}
 ```
 
-If you wanted to give frame titles a little bit more weight, you could write `{series=\AlegreyaMedium,size=\Large}`. If you wanted to make them slightly larger, you could change `\Large` to `\LARGE`.
+If you wanted to give frame titles a little bit more weight, you could write `series=\AlegreyaMedium` and `size=\Large`. If you wanted to make them slightly larger, you could write `size=\LARGE`.
 
-By default, the theme uses serif type for most text and reserves sans-serif type for the presentation title, formatted in black weight, and URLs. It is possible to alter this behavior by modifying `beamerfonttheme*.sty`. For example, the appearance of the presentation title is determined by:
+By default, the theme uses serif type for body text and reserves sans-serif type for the presentation title, formatted in black weight. It is possible to modify this behavior by rewriting parts of `beamerfonttheme*.sty`. For example, the appearance of the presentation title is determined by:
 
 ```tex
 \setbeamerfont{title}{series=\AlegreyaSansBlack,size=\LARGE}
 ```
 
-Changing `\AlegreyaSansBlack` to `\AlegreyaBlack` in this command makes the title serif like any other text. Deleting `\usefonttheme{serif}` near the top of the style file makes sans-serif type the new default for all text. Changing `\urlstyle{sf}` to `\urlstyle{same}` makes URLs appear like normal text, and deleting the line altogether resets them to true type.
+Changing `\AlegreyaSansBlack` to `\AlegreyaBlack` in this line sets the title to serif, keeping the same weight. Deleting `\usefonttheme{serif}` near the top of the file makes sans-serif type the new default for all text. Changing `\urlstyle{same}` to `\urlstyle{sf}` makes URLs sans-serif, and deleting the line altogether resets them to true type.
 
 ### Figures
 
