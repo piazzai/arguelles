@@ -53,11 +53,11 @@ These settings are provided in `beamercolortheme*.sty` and can be customized usi
 \setbeamercolor*{structure}{bg=oc-blue-0,fg=black!80}
 ```
 
-See the opencolor [README](https://mirrors.dotsrc.org/ctan/macros/latex/contrib/opencolor/README.md) for additional information.
+See the opencolor documentation for additional details.
 
 ### Font weights
 
-It is possible to change font styles and weights. Alegreya is a comprehensive family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual bold provided by `\bfseries`, Alegreya comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These weights are set by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin`, as explained in the Alegreya [README](https://mirrors.dotsrc.org/ctan/fonts/alegreya/README), and can be combined with `\scshape` or `\itshape` to produce a variety of effects.
+Alegreya is a comprehensive family and comes with a variety of weights, as does its sister family Alegreya Sans. In addition to the usual bold provided by `\bfseries`, Alegreya comes in medium, extra bold, and black. Alegreya Sans further comes in light and thin. These weights are set by commands like `\AlegreyaExtraBold` or `\AlegreyaSansThin`, as explained in the Alegreya documentation, and can be combined with `\scshape` or `\itshape` to produce a variety of effects.
 
 The file `beamerfonttheme*.sty` sets the type for various elements of the layout. For example, the appearance of frame titles is determined by the command:
 
