@@ -15,7 +15,7 @@ The theme requires the packages [Alegreya/AlegreyaSans](https://ctan.org/pkg/ale
 
 By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points. See the two animations below for comparison.
 
-The `frameno` option adds frame numbering in the bottom right corner. By default, frame numbers are hidden on title and plain frames. They can also be suppressed on individual frames through the local `noframenumbering` option, as in:
+The `frameno` option adds frame numbering in the bottom right corner. By default, frame numbers are hidden on title and plain frames. They can be suppressed on individual frames through `noframenumbering`, as in:
 
 ```tex
 \begin{frame}[noframenumbering]
