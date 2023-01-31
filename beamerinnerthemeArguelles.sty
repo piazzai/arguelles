@@ -91,5 +91,18 @@
  }{}
 }{}{}
 
+% suppress frame numbering
+\providebool{Arguelles@noframenumbering}
+\define@key{beamerframe}{noframenumbering}[true]{
+  \booltrue{Arguelles@noframenumbering}
+  \begingroup
+  \setbeamertemplate{footline}{}
+}
+\pretocmd{\beamer@reseteecodes}{
+ \ifbool{Arguelles@noframenumbering}{
+  \endgroup\boolfalse{Arguelles@noframenumbering}
+ }{}
+}{}{}
+
 \mode<all>
 \endinput
