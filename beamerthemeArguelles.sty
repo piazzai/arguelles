@@ -36,6 +36,7 @@
 \DeclareOption{mp}{\@optMptrue}
 \ProcessOptions
 
+% sans font
 \if@optSans
 \usefonttheme[onlymath]{serif}
 \newcommand\mediumfont{\AlegreyaSansMedium}
@@ -45,6 +46,7 @@
 \fi
 
 \if@optMp
+% extra packages
 \RequirePackage[normalem]{ulem}
 \RequirePackage{booktabs}
 \RequirePackage{dcolumn}
