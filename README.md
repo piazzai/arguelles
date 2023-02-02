@@ -1,8 +1,8 @@
 <!--
-- Argüelles v1.2.2
-- Copyright (c) 2020 Michele Piazzai. Contact: michele.piazzai@uc3m.es
-- This work is released under the MIT License and is free to use, copy, modify,
-- merge, publish, distribute, sublicense, and/or sell. See LICENSE for details.
+arguelles v2.1.0
+author: Michele Piazzai
+contact: michele.piazzai@uc3m.es
+license: MIT
 -->
 
 # arguelles
