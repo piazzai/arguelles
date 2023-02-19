@@ -90,7 +90,7 @@ Both old-style and lining figures are also available in a monospaced version, wh
 
 ## Known issues
 
-Argüelles is built with the intention to reserve as much space as possible for the content of your slides. When using subsections, the progress bar in the headline places dots on multiple lines, which takes space away from your content. The theme does not handle this situation well. You can force the dots to appear on the same line by loading beamer with the `compress` option, as in `demo.tex`:
+Argüelles is built with the intention to reserve as much space as possible for the content of your slides. When using subsections, the progress bar in the headline places dots on multiple lines, which takes space away from your content. The theme does not handle this situation well. You can force the dots to appear on the same line by loading beamer with the `compress` option, as in the demo:
 
 ```tex
 \documentclass[compress]{beamer}
