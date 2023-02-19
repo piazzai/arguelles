@@ -11,20 +11,6 @@ Argüelles is a beamer theme that helps you create beautiful presentations. It a
 
 The theme requires the packages [Alegreya/AlegreyaSans](https://ctan.org/pkg/alegreya), [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), and [tikz/pgf](https://ctan.org/pkg/pgf) to be installed on your computer. These are included in common LaTeX distributions, such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
 
-### Options
-
-By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points. See the two animations below for comparison.
-
-The `frameno` option adds frame numbering in the bottom right corner. By default, frame numbers are hidden on title and plain frames. They can be suppressed on individual frames through `noframenumbering`, as in:
-
-```tex
-\begin{frame}[noframenumbering]
-    ...
-\end{frame}
-```
-
-The `mp` option loads additional dependencies that could be useful for designing scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots) (with `compat=1.18`), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the `calc` library for TikZ and the `statistics` and `fillbetween` libraries for PGFPlots.
-
 ## Demo
 
 The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
@@ -40,6 +26,14 @@ The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 ## Installation
 
 Argüelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
+
+## Usage
+
+By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points. See the two animations below for comparison.
+
+The `frameno` option adds frame numbering in the bottom right corner of each frame. By default, frame numbers are hidden on title and plain frames. They can also be suppressed on individual frames by `\begin{frame}[noframenumbering]`.
+
+The `mp` option loads additional dependencies that could be useful for designing scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [calc](https://tikz.dev/library-calc) library for TikZ, and the [statistics](https://tikz.dev/pgfplots/libs-statistics) and [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween) libraries for PGFplots.
 
 ## Customization
 
