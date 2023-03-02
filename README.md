@@ -25,7 +25,7 @@ The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
 ## Installation
 
-Argüelles is [hosted on CTAN](https://ctan.org/pkg/beamertheme-arguelles) and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
+Argüelles is hosted on CTAN and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
 
 ## Usage
 
