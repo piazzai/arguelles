@@ -8,6 +8,34 @@
 
 \mode<presentation>
 
+\newif\if@optSans
+\@optSansfalse
+\DeclareOption{sans}{\@optSanstrue}
+\newif\if@optFrameno
+\@optFramenofalse
+\DeclareOption{frameno}{\@optFramenotrue}
+\newif\if@optSplitnav
+\@optSplitnavfalse
+\DeclareOption{splitnav}{\@optSplitnavtrue}
+\newif\if@optMp
+\@optMpfalse
+\DeclareOption{mp}{\@optMptrue}
+\ProcessOptions
+
+% split navigation
+\if@optSplitnav
+\useoutertheme[subsection=false]{miniframes}
+\setbeamertemplate{mini frame in other section}{}
+\RequirePackage{etoolbox}
+\let\beamer@section@set@min@width=\relax
+\patchcmd{\insertnavigation}{\hskip-1.875ex plus-1fill}{}{}{}
+\patchcmd{\sectionentry}{\hskip1.875ex plus 1fill}{}{}{}
+\patchcmd{\sectionentry}{\hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}}{}{}{}
+\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other subsection of current section}}{}{}
+\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other section}}{}{}
+\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection of current section}}{\usebeamertemplate{mini frame in other subsection}}{}{}
+\fi
+
 % dependencies
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
@@ -27,17 +55,6 @@
 \useoutertheme{Arguelles}
 \usecolortheme{Arguelles}
 \usefonttheme{Arguelles}
-
-\newif\if@optSans
-\@optSansfalse
-\DeclareOption{sans}{\@optSanstrue}
-\newif\if@optFrameno
-\@optFramenofalse
-\DeclareOption{frameno}{\@optFramenotrue}
-\newif\if@optMp
-\@optMpfalse
-\DeclareOption{mp}{\@optMptrue}
-\ProcessOptions
 
 % sans font
 \if@optSans
