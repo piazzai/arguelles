@@ -15,13 +15,7 @@ The theme requires the packages [Alegreya/AlegreyaSans](https://ctan.org/pkg/ale
 
 The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
 
-### Serif
-
-![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-serif.gif)
-
-### Sans-serif
-
-![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles-sans.gif)
+![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles.gif)
 
 ## Installation
 
@@ -29,13 +23,13 @@ Argüelles is hosted on CTAN and distributed as part of MikTex and TeXLive. It c
 
 ## Usage
 
-By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points. See the two animations below for comparison.
+By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points.
 
 The `frameno` option adds frame numbering in the bottom right corner of each frame. By default, frame numbers are hidden on title and plain frames. They can also be suppressed on individual frames by `\begin{frame}[noframenumbering]`.
 
 The `splitnav` option makes the navigation bar in the headline display only the current section and its frames. This could be preferable if your presentation has only a few sections, which do not adequately fill the headline, or if it has a lot of sections and the headline looks too crowded.
 
-The `mp` option loads additional dependencies that could be useful for designing scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [calc](https://tikz.dev/library-calc) library for TikZ, and the [statistics](https://tikz.dev/pgfplots/libs-statistics) and [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween) libraries for PGFplots.
+The `mp` option loads additional dependencies that could be useful for scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [calc](https://tikz.dev/library-calc) library for TikZ, and the [groupplots](https://tikz.dev/pgfplots/libs-groupplots), [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween), and [statistics](https://tikz.dev/pgfplots/libs-statistics) libraries for PGFplots.
 
 ## Customization
 
