@@ -17,6 +17,10 @@
 \newcommand{\email}[1]{
   \def\insertemail{\href{mailto:#1}{\raisebox{-.1em}{\faIcon{envelope}}\hspace{.3em}#1}}
 }
+\def\inserthomepage{}
+\newcommand{\homepage}[1]{
+  \def\inserthomepage{\href{https://#1}{\raisebox{-.1em}{\hspace{.04em}\faIcon{globe}}\hspace{.31em}#1}}
+}
 
 % title page
 \defbeamertemplate*{title page}{Arguelles}{
@@ -27,7 +31,8 @@
   {\usebeamerfont{date}\insertdate}\par\bigskip
   {\usebeamerfont{author}\insertauthor}\par\smallskip
   {\usebeamerfont{institute}\insertinstitute}\par
-  {\usebeamerfont{email}\insertemail}
+  {\usebeamerfont{email}\insertemail}\par
+  {\usebeamerfont{homepage}\inserthomepage}
  \end{beamercolorbox}
  \addtocounter{framenumber}{-1}
 }
