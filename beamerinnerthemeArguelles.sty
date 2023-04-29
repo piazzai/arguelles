@@ -19,7 +19,11 @@
 }
 \def\inserthomepage{}
 \newcommand{\homepage}[1]{
-  \def\inserthomepage{\href{#1}{\raisebox{-.1em}{\hspace{.025em}\faIcon{globe}}\hspace{.325em}#1}}
+  \def\inserthomepage{\href{https://#1}{\raisebox{-.1em}{\hspace{.025em}\faIcon{globe}}\hspace{.325em}#1}}
+}
+\def\insertgithub{}
+\newcommand{\github}[1]{
+  \def\insertgithub{\href{https://github.com/#1}{\raisebox{-.1em}{\hspace{.025em}\faIcon{github}}\hspace{.325em}github.com/#1}}
 }
 
 % title page
@@ -32,7 +36,8 @@
   {\usebeamerfont{author}\insertauthor}\par\smallskip
   {\usebeamerfont{institute}\insertinstitute}\par
   {\usebeamerfont{email}\insertemail}\par
-  {\usebeamerfont{homepage}\inserthomepage}
+  {\usebeamerfont{homepage}\inserthomepage}\par
+  {\usebeamerfont{github}\insertgithub}
  \end{beamercolorbox}
  \addtocounter{framenumber}{-1}
 }
