@@ -13,7 +13,7 @@ The theme requires the packages [alegreya](https://ctan.org/pkg/alegreya), [eule
 
 ## Demo
 
-The files `demo.tex` and `demo.pdf` demonstrate the main features of the theme.
+The files `demo-arguelles.tex` and `demo-arguelles.pdf` demonstrate the main features of the theme.
 
 ![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles.gif)
 
