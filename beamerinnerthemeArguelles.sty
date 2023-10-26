@@ -83,6 +83,16 @@
     \fi
 }
 
+% background image
+\define@key{beamerframe}{bgimage}{
+  \setbeamertemplate{background}{
+   \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+     \path[fill stretch image=#1] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
+   \end{tikzpicture}
+  }
+}
+
 % standout frame
 \providebool{Arguelles@standout}
 \define@key{beamerframe}{standout}[true]{
