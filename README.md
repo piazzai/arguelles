@@ -9,7 +9,7 @@ license: MIT
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
-The theme requires the packages [alegreya](https://ctan.org/pkg/alegreya), [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), and [pgf](https://ctan.org/pkg/pgf) to be installed on your computer. These are included in common LaTeX distributions, such as MiKTeX and TeXLive.
+The theme requires the packages [alegreya](https://ctan.org/pkg/alegreya), [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), [pgf](https://ctan.org/pkg/pgf), and [tcolorbox](https://ctan.org/pkg/tcolorbox) to be installed on your computer. These are included in common LaTeX distributions, such as MiKTeX and TeXLive.
 
 ## Demo
 
@@ -29,7 +29,7 @@ The `frameno` option adds frame numbering in the bottom right corner of each fra
 
 The `splitnav` option makes the navigation bar in the headline display only the current section and its frames. This could be preferable if your presentation has only a few sections, which do not adequately fill the headline, or if it has a lot of sections and the headline looks too crowded.
 
-The `mp` option loads additional dependencies that could be useful for scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [calc](https://tikz.dev/library-calc) library for TikZ, and the [groupplots](https://tikz.dev/pgfplots/libs-groupplots), [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween), and [statistics](https://tikz.dev/pgfplots/libs-statistics) libraries for PGFplots.
+The `mp` option loads additional dependencies that could be useful for scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [groupplots](https://tikz.dev/pgfplots/libs-groupplots), [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween), and [statistics](https://tikz.dev/pgfplots/libs-statistics) libraries for PGFplots.
 
 ## Customization
 
