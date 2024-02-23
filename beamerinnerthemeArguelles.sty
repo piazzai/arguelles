@@ -28,18 +28,18 @@
 
 % title page
 \defbeamertemplate*{title page}{Arguelles}{
- \vfill\begin{beamercolorbox}{inverted text}
-  {\usebeamerfont{title}\inserttitle}\par
-  {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
-  {\usebeamerfont{event}\insertevent}\par
-  {\usebeamerfont{date}\insertdate}\par\bigskip
-  {\usebeamerfont{author}\insertauthor}\par\smallskip
-  {\usebeamerfont{institute}\insertinstitute}\par
-  {\usebeamerfont{email}\insertemail}\par
-  {\usebeamerfont{homepage}\inserthomepage}\par
-  {\usebeamerfont{github}\insertgithub}
- \end{beamercolorbox}
- \addtocounter{framenumber}{-1}
+  \vfill\begin{beamercolorbox}{inverted text}
+    {\usebeamerfont{title}\inserttitle}\par
+    {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
+    {\usebeamerfont{event}\insertevent}\par
+    {\usebeamerfont{date}\insertdate}\par\bigskip
+    {\usebeamerfont{author}\insertauthor}\par\smallskip
+    {\usebeamerfont{institute}\insertinstitute}\par
+    {\usebeamerfont{email}\insertemail}\par
+    {\usebeamerfont{homepage}\inserthomepage}\par
+    {\usebeamerfont{github}\insertgithub}
+  \end{beamercolorbox}
+  \addtocounter{framenumber}{-1}
 }
 
 % lists
@@ -59,56 +59,57 @@
 
 % background
 \BeforeBeginEnvironment{frame}{
- \setbeamertemplate{background}{
-  \begin{tikzpicture}
-   \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
-   \ifnum\thepage>1\relax
-    \fill[structure.bg] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
-   \fi
-  \end{tikzpicture}
- }
+  \setbeamertemplate{background}{
+    \begin{tikzpicture}
+      \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+      \ifnum\thepage>1\relax
+        \fill[structure.bg] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
+      \fi
+    \end{tikzpicture}
+  }
 }
 
 % fullscreen image
 \newcommand{\fillpicture}[1]{
-    \centering
-    \ifbeamer@plainframe
+  \centering
+  \ifbeamer@plainframe
     \tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center) {
-        \includegraphics[width=\paperwidth,height=.98\paperheight]{#1}
-        };
-    \else
+      \includegraphics[width=\paperwidth,height=.98\paperheight]{#1}
+    };
+  \else
     \tikz[remember picture,overlay] \node[inner sep=0pt] at ($(current page.north)-(0,.526\paperheight)$) {
-        \includegraphics[width=\paperwidth,height=.929\paperheight]{#1}
-        };
-    \fi
+      \includegraphics[width=\paperwidth,height=.929\paperheight]{#1}
+    };
+  \fi
 }
 
 % background image
 \define@key{beamerframe}{bg}{
   \setbeamertemplate{background}{
-   \begin{tikzpicture}
-    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
-     \path[fill overzoom image=#1] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
-   \end{tikzpicture}
+    \begin{tikzpicture}
+      \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+      \path[fill overzoom image=#1] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
+    \end{tikzpicture}
   }
 }
 
 % standout frame
 \providebool{Arguelles@standout}
 \define@key{beamerframe}{standout}[true]{
- \booltrue{Arguelles@standout}
- \begingroup
- \setbeamertemplate{background}{}
- \setbeamercolor*{footline}{fg=structure.bg}
- \beamer@frametopskip=0pt plus 1fill\relax%
- \beamer@framebottomskip=0pt plus 1.25fill\relax%
- \color{structure.bg}
- \large
+  \booltrue{Arguelles@standout}
+  \begingroup
+  \setbeamertemplate{background}{}
+  \setbeamercolor*{normal text}{fg=structure.bg}
+  \setbeamercolor*{footline}{fg=structure.bg}
+  \beamer@frametopskip=0pt plus 1fill\relax%
+  \beamer@framebottomskip=0pt plus 1.25fill\relax%
+  \color{structure.bg}
+  \large
 }
 \pretocmd{\beamer@reseteecodes}{
- \ifbool{Arguelles@standout}{
-  \endgroup\boolfalse{Arguelles@standout}
- }{}
+  \ifbool{Arguelles@standout}{
+    \endgroup\boolfalse{Arguelles@standout}
+  }{}
 }{}{}
 
 % suppress frame numbering
@@ -119,9 +120,9 @@
   \setbeamertemplate{footline}{}
 }
 \pretocmd{\beamer@reseteecodes}{
- \ifbool{Arguelles@noframenumbering}{
-  \endgroup\boolfalse{Arguelles@noframenumbering}
- }{}
+  \ifbool{Arguelles@noframenumbering}{
+    \endgroup\boolfalse{Arguelles@noframenumbering}
+  }{}
 }{}{}
 
 \mode<all>
