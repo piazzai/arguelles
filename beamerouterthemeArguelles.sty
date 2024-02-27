@@ -1,10 +1,10 @@
-% arguelles v2.3.0
+% arguelles v2.4.0
 % author: Michele Piazzai
 % contact: michele.piazzai@uc3m.es
 % license: MIT
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerouterthemeArguelles}[2023/10/26 Argüelles]
+\ProvidesPackage{beamerouterthemeArguelles}[2024/02/27 Argüelles]
 
 \mode<presentation>
 
@@ -13,17 +13,17 @@
 
 % headline navigation
 \defbeamertemplate*{headline}{Arguelles}{
- \begin{beamercolorbox}[ht=1.2em,dp=1.6em]{section in head/foot}
-  {\usebeamerfont{headline section}\insertnavigation{\paperwidth}}
- \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=1.2em,dp=1.6em]{section in head/foot}
+        {\usebeamerfont{headline section}\insertnavigation{\paperwidth}}
+    \end{beamercolorbox}
 }
 
 % frame title
 \defbeamertemplate*{frametitle}{Arguelles}{
- \begin{beamercolorbox}[wd=.95\paperwidth]{normal text}
-  {\usebeamerfont{frame title}\insertframetitle}\hfill
-  {\usebeamerfont{frame subtitle}\insertframesubtitle}
- \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.95\paperwidth]{normal text}
+        {\usebeamerfont{frame title}\insertframetitle}\hfill
+        {\usebeamerfont{frame subtitle}\insertframesubtitle}
+    \end{beamercolorbox}
 }
 
 \mode<all>
