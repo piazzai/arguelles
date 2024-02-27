@@ -17,23 +17,20 @@
 \newif\if@optSplitnav
 \@optSplitnavfalse
 \DeclareOption{splitnav}{\@optSplitnavtrue}
-\newif\if@optMp
-\@optMpfalse
-\DeclareOption{mp}{\@optMptrue}
 \ProcessOptions
 
 % split navigation
 \if@optSplitnav
-\useoutertheme[subsection=false]{miniframes}
-\setbeamertemplate{mini frame in other section}{}
-\RequirePackage{etoolbox}
-\let\beamer@section@set@min@width=\relax
-\patchcmd{\insertnavigation}{\hskip-1.875ex plus-1fill}{}{}{}
-\patchcmd{\sectionentry}{\hskip1.875ex plus 1fill}{}{}{}
-\patchcmd{\sectionentry}{\hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}}{}{}{}
-\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other subsection of current section}}{}{}
-\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other section}}{}{}
-\patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection of current section}}{\usebeamertemplate{mini frame in other subsection}}{}{}
+    \useoutertheme[subsection=false]{miniframes}
+    \setbeamertemplate{mini frame in other section}{}
+    \RequirePackage{etoolbox}
+    \let\beamer@section@set@min@width=\relax
+    \patchcmd{\insertnavigation}{\hskip-1.875ex plus-1fill}{}{}{}
+    \patchcmd{\sectionentry}{\hskip1.875ex plus 1fill}{}{}{}
+    \patchcmd{\sectionentry}{\hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}}{}{}{}
+    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other subsection of current section}}{}{}
+    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other section}}{}{}
+    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection of current section}}{\usebeamertemplate{mini frame in other subsection}}{}{}
 \fi
 
 % dependencies
@@ -59,34 +56,20 @@
 
 % sans font
 \if@optSans
-\usefonttheme[onlymath]{serif}
-\newcommand\mediumfont{\AlegreyaSansMedium}
+    \usefonttheme[onlymath]{serif}
+    \newcommand\mediumfont{\AlegreyaSansMedium}
 \else
-\usefonttheme{serif}
-\newcommand\mediumfont{\AlegreyaMedium}
+    \usefonttheme{serif}
+    \newcommand\mediumfont{\AlegreyaMedium}
 \fi
 
 % frame numbers
 \if@optFrameno
-\defbeamertemplate*{footline}{Arguelles}{
- \usebeamerfont{footline section}\hfill\raisebox{.025\paperheight}{
-    \insertframenumber\hspace{.01\paperwidth}
+    \defbeamertemplate*{footline}{Arguelles}{
+        \usebeamerfont{footline section}\hfill\raisebox{.025\paperheight}{
+            \insertframenumber\hspace{.01\paperwidth}
+        }
     }
-}
-\fi
-
-% scientific packages
-\if@optMp
-\RequirePackage[normalem]{ulem}
-\RequirePackage{booktabs}
-\RequirePackage{dcolumn}
-\RequirePackage{makecell}
-\RequirePackage{colortbl}
-\RequirePackage{cancel}
-\RequirePackage{pgfplots}
-\RequirePackage{csvsimple}
-\pgfplotsset{compat=1.18}
-\usepgfplotslibrary{fillbetween,groupplots,statistics}
 \fi
 
 \AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
