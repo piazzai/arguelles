@@ -1,5 +1,5 @@
 <!--
-arguelles v2.3.0
+arguelles v2.4.0
 author: Michele Piazzai
 contact: michele.piazzai@uc3m.es
 license: MIT
@@ -25,11 +25,16 @@ Argüelles is hosted on CTAN and distributed as part of MikTex and TeXLive. It c
 
 By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points.
 
-The `frameno` option adds frame numbering in the bottom right corner of each frame. By default, frame numbers are hidden on title and plain frames. They can also be suppressed on individual frames by `\begin{frame}[noframenumbering]`.
+The `frameno` option adds frame numbering in the bottom right corner of each frame. Frame numbers remain hidden on title and plain frames. They can also be suppressed on individual frames by adding the `noframenumbering` option to the `frame` environment, as in:
 
-The `splitnav` option makes the navigation bar in the headline display only the current section and its frames. This could be preferable if your presentation has only a few sections, which do not adequately fill the headline, or if it has a lot of sections and the headline looks too crowded.
+```tex
+\begin{frame}[noframenumbering]
+...
+\end{frame}
 
-The `mp` option loads additional dependencies that could be useful for scientific presentations. These currently include [ulem](https://ctan.org/pkg/ulem), [booktabs](https://ctan.org/pkg/booktabs), [dcolumn](https://ctan.org/pkg/dcolumn), [makecell](https://ctan.org/pkg/makecell), [colortbl](https://www.ctan.org/pkg/colortbl), [cancel](https://www.ctan.org/pkg/cancel), [pgfplots](https://www.ctan.org/pkg/pgfplots), and [csvsimple](https://www.ctan.org/pkg/csvsimple). In addition, the option loads the [groupplots](https://tikz.dev/pgfplots/libs-groupplots), [fillbetween](https://tikz.dev/pgfplots/libs-fillbetween), and [statistics](https://tikz.dev/pgfplots/libs-statistics) libraries for PGFplots.
+```
+
+The `splitnav` option makes the navigation bar in the headline display only the current section and its frames, as opposed to all section and all frames. This could be preferable if your presentation has only a few sections, which do not adequately fill the headline, or if it has a lot of sections and the headline looks too crowded.
 
 ## Customization
 
@@ -43,7 +48,7 @@ It is possible to change parts of the theme by altering the style files. There a
 
 ### Colors
 
-The theme ships with the `opencolor` package, which provides color definitions for the [Open Color](https://yeun.github.io/open-color/) library. By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
+The theme ships with the opencolor package, which provides color definitions for the [Open Color](https://yeun.github.io/open-color/) library. By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
 
 These settings are provided in `beamercolortheme*.sty` and can be customized using any default or opencolor name. For example:
 
@@ -51,7 +56,7 @@ These settings are provided in `beamercolortheme*.sty` and can be customized usi
 \setbeamercolor*{structure}{bg=oc-blue-0,fg=black!80}
 ```
 
-See the opencolor documentation for additional details.
+See the opencolor package documentation for additional details.
 
 ### Font weights
 
@@ -86,7 +91,7 @@ Both old-style and lining figures are also available in a monospaced version, wh
 
 ## Known issues
 
-Argüelles is built with the intention to reserve as much space as possible for the content of your slides. When using subsections, the progress bar in the headline places dots on multiple lines, which takes space away from your content. The theme does not handle this situation well. You can force the dots to appear on the same line by loading beamer with the `compress` option, as in the demo:
+Argüelles is built with the intention to reserve as much space as possible for the content of your slides. When using subsections, the progress bar in the headline places dots on multiple lines, which takes space away from your content. The theme does not handle this situation well. You can force the dots to appear on the same line by loading the `beamer` class with the `compress` option, as below:
 
 ```tex
 \documentclass[compress]{beamer}
