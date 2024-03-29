@@ -62,7 +62,7 @@
   \setbeamertemplate{background}{
     \begin{tikzpicture}
       \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
-      \ifnum\thepage>1\relax
+      \ifnum\theframenumber>0\relax
         \fill[structure.bg] (0,.01\paperheight) rectangle (\paperwidth,.99\paperheight);
       \fi
     \end{tikzpicture}
