@@ -1,5 +1,5 @@
 <!--
-arguelles v2.4.0
+arguelles v2.4.1
 author: Michele Piazzai
 contact: michele.piazzai@uc3m.es
 license: MIT
