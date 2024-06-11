@@ -48,7 +48,7 @@ It is possible to change parts of the theme by altering the style files. There a
 
 ### Colors
 
-The theme ships with the opencolor package, which provides color definitions for the [Open Color](https://yeun.github.io/open-color/) library. By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
+The theme ships with the [opencolor package](https://www.ctan.org/pkg/opencolor), which provides color definitions for the [Open Color library](https://yeun.github.io/open-color/). By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
 
 These settings are provided in `beamercolortheme*.sty` and can be customized using any default or opencolor name. For example:
 
@@ -56,7 +56,7 @@ These settings are provided in `beamercolortheme*.sty` and can be customized usi
 \setbeamercolor*{structure}{bg=oc-blue-0,fg=black!80}
 ```
 
-See the opencolor package documentation for additional details.
+See the [opencolor documentation](https://github.com/piazzai/opencolor/blob/master/README.md) for additional details.
 
 ### Font weights
 
