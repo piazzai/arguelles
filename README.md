@@ -1,7 +1,7 @@
 <!--
-arguelles v2.4.1
+arguelles v2.4.2
 author: Michele Piazzai
-contact: michele.piazzai@uc3m.es
+contact: michele@piazzai.addy.io
 license: MIT
 -->
 
