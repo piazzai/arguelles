@@ -34,7 +34,19 @@
 \fi
 
 % package dependencies
-\RequirePackage[utf8]{inputenc}
+\RequirePackage{ifluatex}
+\RequirePackage{ifxetex}
+% Load inputenc only for pdfLaTeX
+\ifluatex
+  % LuaTeX, no inputenc needed
+\else
+  \ifxetex
+    % XeLaTeX, no inputenc needed
+  \else
+    % pdfLaTeX, load inputenc
+    \RequirePackage[utf8]{inputenc}
+  \fi
+\fi
 \RequirePackage[T1]{fontenc}
 \RequirePackage[osf]{Alegreya}
 \RequirePackage[osf]{AlegreyaSans}
