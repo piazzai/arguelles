@@ -97,4 +97,18 @@ Argüelles is built with the intention to reserve as much space as possible for 
 \documentclass[compress]{beamer}
 ```
 
+#### When using notes on second screen, frame text becomes white
+
+This is a [known problem](https://github.com/josephwright/beamer/issues/337) caused by beamer's `show notes on second screen` option when the document is compiled using XeLaTeX. It is not an issue caused by the theme. It can be fixed by switching to pdfLaTeX or by adding the following to your document's preamble:
+
+```tex
+\makeatletter
+\def\beamer@framenotesbegin{% at beginning of slide
+    \usebeamercolor[fg]{normal text}%
+    \gdef\beamer@noteitems{}%
+    \gdef\beamer@notes{}%
+}
+\makeatother
+```
+
 If you find any other problem using this package, please [open an issue](https://github.com/piazzai/arguelles/issues).
