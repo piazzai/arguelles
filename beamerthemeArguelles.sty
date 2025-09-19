@@ -1,10 +1,10 @@
-% arguelles v2.4.2
+% arguelles v2.5.0
 % author: Michele Piazzai
-% https://github.com/piazzai
+% https://piazzai.github.io
 % license: MIT
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerthemeArguelles}[2024/06/11 Argüelles]
+\ProvidesPackage{beamerthemeArguelles}[2025/09/19 Argüelles]
 
 \mode<presentation>
 
@@ -17,40 +17,46 @@
 \newif\if@optSplitnav
 \@optSplitnavfalse
 \DeclareOption{splitnav}{\@optSplitnavtrue}
+\newif\if@optNoalegre
+\@optNoalegrefalse
+\DeclareOption{noalegre}{\@optNoalegretrue}
 \ProcessOptions
 
 % split navigation
 \if@optSplitnav
-    \useoutertheme[subsection=false]{miniframes}
-    \setbeamertemplate{mini frame in other section}{}
-    \RequirePackage{etoolbox}
-    \let\beamer@section@set@min@width=\relax
-    \patchcmd{\insertnavigation}{\hskip-1.875ex plus-1fill}{}{}{}
-    \patchcmd{\sectionentry}{\hskip1.875ex plus 1fill}{}{}{}
-    \patchcmd{\sectionentry}{\hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}}{}{}{}
-    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other subsection of current section}}{}{}
-    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other section}}{}{}
-    \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection of current section}}{\usebeamertemplate{mini frame in other subsection}}{}{}
+  \useoutertheme[subsection=false]{miniframes}
+  \setbeamertemplate{mini frame in other section}{}
+  \RequirePackage{etoolbox}
+  \let\beamer@section@set@min@width=\relax
+  \patchcmd{\insertnavigation}{\hskip-1.875ex plus-1fill}{}{}{}
+  \patchcmd{\sectionentry}{\hskip1.875ex plus 1fill}{}{}{}
+  \patchcmd{\sectionentry}{\hyperlink{Navigation#3}{{\usebeamertemplate{section in head/foot shaded}}}}{}{}{}
+  \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other subsection of current section}}{}{}
+  \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection}}{\usebeamertemplate{mini frame in other section}}{}{}
+  \patchcmd{\slideentry}{\usebeamertemplate{mini frame in other subsection of current section}}{\usebeamertemplate{mini frame in other subsection}}{}{}
 \fi
 
 % package dependencies
 \RequirePackage{ifluatex}
 \RequirePackage{ifxetex}
-% Load inputenc only for pdfLaTeX
 \ifluatex
-  % LuaTeX, no inputenc needed
+  % lualatex, no inputenc needed
 \else
   \ifxetex
-    % XeLaTeX, no inputenc needed
+    % xelatex, no inputenc needed
   \else
-    % pdfLaTeX, load inputenc
+    % pdflatex, load inputenc
     \RequirePackage[utf8]{inputenc}
   \fi
 \fi
 \RequirePackage[T1]{fontenc}
-\RequirePackage[osf]{Alegreya}
-\RequirePackage[osf]{AlegreyaSans}
-\RequirePackage[euler-hat-accent]{eulervm}
+\if@optNoalegre
+  % no alegreya, you are on your own
+\else
+  \RequirePackage[osf]{Alegreya}
+  \RequirePackage[osf]{AlegreyaSans}
+  \RequirePackage[euler-hat-accent]{eulervm}
+\fi
 \RequirePackage[bb=px]{mathalpha}
 \RequirePackage[nopatch=footnote]{microtype}
 \RequirePackage{fontawesome5}
@@ -70,21 +76,25 @@
 \usefonttheme{Arguelles}
 
 % sans font
-\if@optSans
+\if@optNoalegre
+  \newcommand\mediumfont{\normalfont}
+\else
+  \if@optSans
     \usefonttheme[onlymath]{serif}
     \newcommand\mediumfont{\AlegreyaSansMedium}
-\else
+  \else
     \usefonttheme{serif}
     \newcommand\mediumfont{\AlegreyaMedium}
+  \fi
 \fi
 
 % frame numbers
 \if@optFrameno
-    \defbeamertemplate*{footline}{Arguelles}{
-        \usebeamerfont{footline section}\hfill\raisebox{.025\paperheight}{
-            \insertframenumber\hspace{.01\paperwidth}
-        }
+  \defbeamertemplate*{footline}{Arguelles}{
+    \usebeamerfont{footline section}\hfill\raisebox{.025\paperheight}{
+      \insertframenumber\hspace{.01\paperwidth}
     }
+  }
 \fi
 
 \AtBeginEnvironment{proof}{\let\@addpunct\@gobble}
