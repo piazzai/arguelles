@@ -9,7 +9,7 @@ license: MIT
 
 Argüelles is a beamer theme that helps you create beautiful presentations. It aims for simplicity and readability by following best practices of graphic design. The layout is elegant but subtle, so as to keep the audience's attention on your content. This is brought to life by Alegreya, one of the 53 Fonts of the Decade selected by the Association Typographique Internationale (2011).
 
-The theme requires the packages [alegreya](https://ctan.org/pkg/alegreya), [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), [pgf](https://ctan.org/pkg/pgf), and [tcolorbox](https://ctan.org/pkg/tcolorbox) to be installed on your computer. These are included in common LaTeX distributions, such as MiKTeX and TeXLive.
+The theme requires the following packages to be installed on your computer: [inputenc](https://ctan.org/pkg/inputenc) (if compiling with pdfLaTeX), [fontenc](https://ctan.org/pkg/fontenc), [alegreya](https://ctan.org/pkg/alegreya) and [eulervm](https://ctan.org/pkg/eulervm), [mathalpha](https://www.ctan.org/pkg/mathalpha) (unless you are opting out of Alegreya fonts), [microtype](https://ctan.org/pkg/microtype), [fontawesome5](https://ctan.org/pkg/fontawesome5), [opencolor](https://www.ctan.org/pkg/opencolor), [enumitem](https://www.ctan.org/pkg/enumitem), [parskip](https://www.ctan.org/pkg/parskip), [pgf](https://ctan.org/pkg/pgf), and [tcolorbox](https://ctan.org/pkg/tcolorbox). All of them are included in common LaTeX distributions, such as MiKTeX and TeXLive.
 
 ## Demo
 
@@ -19,11 +19,13 @@ The files `demo-arguelles.tex` and `demo-arguelles.pdf` demonstrate the main fea
 
 ## Installation
 
-Argüelles is hosted on CTAN and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can [create one](https://www.ias.edu/math/computing/faq/local-latex-style-files).
+Argüelles is hosted on CTAN and distributed as part of MikTex and TeXLive. It can also be installed manually by cloning this repository in your `$HOME/texmf/tex/latex` folder, which is automatically searched by LaTeX. If you do not have this folder, you can create one (see [here](https://www.ias.edu/math/computing/faq/local-latex-style-files)).
 
 ## Usage
 
-By default, the theme uses serif fonts for body text. Loading it with the `sans` option makes sans-serif fonts default, keeping serif only for math type. Because sans-serif font is more space-efficient, this could be useful for slides that contain more text and bullet points.
+By default, the theme uses Alegreya (serif) for body text and math, and Alegreya Sans for the presentation's title and subtitle. Some math symbols are taken from the Euler math font, as they look better than default symbols when paired with Alegreya.
+
+Loading the theme with the `sans` option makes Alegreya Sans default also for body text, keeping serif only for math. Because sans serif is more space-efficient, this option can be useful for slides that contain more text and bullet points. The `noalegre` option removes the Alegreya and Euler dependencies entirely. The theme compiles with LaTeX's default fonts and you can override them with any font of your choice.
 
 The `frameno` option adds frame numbering in the bottom right corner of each frame. Frame numbers remain hidden on title and plain frames. They can also be suppressed on individual frames by adding the `noframenumbering` option to the `frame` environment, as in:
 
@@ -48,7 +50,7 @@ It is possible to change parts of the theme by altering the style files. There a
 
 ### Colors
 
-The theme ships with the [opencolor package](https://www.ctan.org/pkg/opencolor), which provides color definitions for the [Open Color library](https://yeun.github.io/open-color/). By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
+The theme ships with the [opencolor](https://www.ctan.org/pkg/opencolor) package, which provides color definitions for the [Open Color](https://yeun.github.io/open-color/) library. By default, the background is set to `oc-gray-0`. The foreground and body text are set to `oc-gray-9`. The color of accented text is `oc-red-9`.
 
 These settings are provided in `beamercolortheme*.sty` and can be customized using any default or opencolor name. For example:
 
@@ -56,7 +58,7 @@ These settings are provided in `beamercolortheme*.sty` and can be customized usi
 \setbeamercolor*{structure}{bg=oc-blue-0,fg=black!80}
 ```
 
-See the [opencolor documentation](https://github.com/piazzai/opencolor/blob/master/README.md) for additional details.
+See the opencolor [docs](https://github.com/piazzai/opencolor/blob/master/README.md) for additional details.
 
 ### Font weights
 
