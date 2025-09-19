@@ -1,7 +1,7 @@
 <!--
-arguelles v2.4.2
+arguelles v2.5.0
 author: Michele Piazzai
-https://github.com/piazzai
+https://piazzai.github.io
 license: MIT
 -->
 
