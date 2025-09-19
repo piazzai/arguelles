@@ -12,8 +12,13 @@
 \urlstyle{same}
 
 % title page elements
-\setbeamerfont{title}{series=\AlegreyaSansBlack,size=\LARGE}
-\setbeamerfont{subtitle}{series=\AlegreyaSansMedium,size=\Large}
+\if@optNoalegre
+  \setbeamerfont{title}{series=\sffamily\bfseries,size=\LARGE}
+  \setbeamerfont{subtitle}{series=\sffamily\bfseries,size=\Large}
+\else
+  \setbeamerfont{title}{series=\AlegreyaSansBlack,size=\LARGE}
+  \setbeamerfont{subtitle}{series=\AlegreyaSansMedium,size=\Large}
+\fi
 \setbeamerfont{event}{series=\itshape}
 \setbeamerfont{date}{series=\itshape}
 \setbeamerfont{author}{series=\bfseries,size=\large}
@@ -23,8 +28,13 @@
 \setbeamerfont{github}{size=\small}
 
 % frame elements
-\setbeamerfont{headline section}{series=\AlegreyaSans\scshape}
-\setbeamerfont{footline section}{series=\AlegreyaSans\scshape,size=\footnotesize}
+\if@optNoalegre
+  \setbeamerfont{headline section}{series=\sffamily}
+  \setbeamerfont{footline section}{series=\sffamily,size=\footnotesize}
+\else
+  \setbeamerfont{headline section}{series=\AlegreyaSans\scshape}
+  \setbeamerfont{footline section}{series=\AlegreyaSans\scshape,size=\footnotesize}
+\fi
 \setbeamerfont{frame title}{series=\mediumfont,size=\Large}
 \setbeamerfont{frame subtitle}{series=\mediumfont,size=\large}
 \setbeamerfont{block title}{series=\mediumfont\itshape}

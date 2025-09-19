@@ -17,6 +17,9 @@
 \newif\if@optSplitnav
 \@optSplitnavfalse
 \DeclareOption{splitnav}{\@optSplitnavtrue}
+\newif\if@optNoalegre
+\@optNoalegrefalse
+\DeclareOption{noalegre}{\@optNoalegretrue}
 \ProcessOptions
 
 % split navigation
@@ -47,8 +50,12 @@
   \fi
 \fi
 \RequirePackage[T1]{fontenc}
-\RequirePackage[osf]{Alegreya}
-\RequirePackage[osf]{AlegreyaSans}
+\if@optNoalegre
+  % no alegreya, you are on your own
+\else
+  \RequirePackage[osf]{Alegreya}
+  \RequirePackage[osf]{AlegreyaSans}
+\fi
 \RequirePackage[euler-hat-accent]{eulervm}
 \RequirePackage[bb=px]{mathalpha}
 \RequirePackage[nopatch=footnote]{microtype}
@@ -69,12 +76,16 @@
 \usefonttheme{Arguelles}
 
 % sans font
-\if@optSans
+\if@optNoalegre
+    \newcommand\mediumfont{\normalfont}
+\else
+  \if@optSans
     \usefonttheme[onlymath]{serif}
     \newcommand\mediumfont{\AlegreyaSansMedium}
-\else
+  \else
     \usefonttheme{serif}
     \newcommand\mediumfont{\AlegreyaMedium}
+  \fi
 \fi
 
 % frame numbers
