@@ -36,14 +36,13 @@
 % package dependencies
 \RequirePackage{ifluatex}
 \RequirePackage{ifxetex}
-% Load inputenc only for pdfLaTeX
 \ifluatex
-  % LuaTeX, no inputenc needed
+  % lualatex, no inputenc needed
 \else
   \ifxetex
-    % XeLaTeX, no inputenc needed
+    % xelatex, no inputenc needed
   \else
-    % pdfLaTeX, load inputenc
+    % pdflatex, load inputenc
     \RequirePackage[utf8]{inputenc}
   \fi
 \fi
