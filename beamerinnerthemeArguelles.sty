@@ -13,6 +13,10 @@
 \newcommand{\event}[1]{
   \def\insertevent{#1}
 }
+\def\insertvenue{}
+\newcommand{\venue}[1]{
+  \def\insertvenue{#1}
+}
 \def\insertemail{}
 \newcommand{\email}[1]{
   \def\insertemail{\href{mailto:#1}{\raisebox{-.1em}{\faIcon{envelope}}\hspace{.3em}#1}}
@@ -32,6 +36,7 @@
     {\usebeamerfont{title}\inserttitle}\par
     {\usebeamerfont{subtitle}\insertsubtitle}\par\bigskip
     {\usebeamerfont{event}\insertevent}\par
+    {\usebeamerfont{venue}\insertvenue}\par
     {\usebeamerfont{date}\insertdate}\par\bigskip
     {\usebeamerfont{author}\insertauthor}\par\smallskip
     {\usebeamerfont{institute}\insertinstitute}\par
