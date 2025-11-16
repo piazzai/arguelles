@@ -55,7 +55,14 @@
 \else
   \RequirePackage[osf]{Alegreya}
   \RequirePackage[osf]{AlegreyaSans}
-  \RequirePackage[euler-hat-accent]{eulervm}
+  % Load eulervm only when unicode-math is NOT active
+  \makeatletter
+  \@ifpackageloaded{unicode-math}{
+    % unicode-math loaded → skip legacy eulervm
+  }{
+    \RequirePackage[euler-hat-accent]{eulervm}
+  }
+  \makeatother
 \fi
 \RequirePackage[bb=px]{mathalpha}
 \RequirePackage[nopatch=footnote]{microtype}
