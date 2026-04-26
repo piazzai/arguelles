@@ -1,8 +1,8 @@
 <!--
-arguelles v2.6.0
-author: piazzai
-contact: hello@piazzai.addy.io
-license: MIT
+arguelles 2.6.0 2026-04-26
+Michele Piazzai <hello@piazzai.addy.io>
+https://piazzai.github.io/
+https://mit-license.org/
 -->
 
 # arguelles
