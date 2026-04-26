@@ -15,7 +15,7 @@ The theme requires the following packages to be installed on your computer: [inp
 
 The files `demo-arguelles.tex` and `demo-arguelles.pdf` demonstrate the main features of the theme.
 
-![](https://github.com/piazzai/arguelles/blob/master/demo/demo-arguelles.gif)
+![](https://github.com/piazzai/arguelles/blob/master/demo-arguelles.gif)
 
 ## Installation
 
